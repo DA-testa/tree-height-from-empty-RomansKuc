@@ -23,13 +23,30 @@ def compute_height(n, parents):
 def node2(n,parents,d):
     if(parents[n]==-1):return 1
     if(d[n]!=0):return d[n]
-    d[n]=node1(parents[n],parents,d)+1
+    d[n]=node2(parents[n],parents,d)+1
     return d[n]
 
 def main():
     # implement input form keyboard and from files
-  
-
+    Text1=input()
+    Text2=input()
+    if(Text1.startswith("F")):
+        filename="test/"+Text2
+        if(filename.endswith("a")):return
+        file=open(filename,"r")
+        n=int(file.readline())
+        Text1=(file.readline())
+        first=text.split()
+        arr=np.asarray(first,dtype=int)
+        g=compute_height(n,arr)
+        print(g)
+    elif(Text1.startswith("I")):
+        n=int(Text2)
+        Text3=input()
+        first=text3.split()
+        arr=np.asarray(first,dtype=int)
+        g=compute_height(n,arr)
+        print(g)
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     
