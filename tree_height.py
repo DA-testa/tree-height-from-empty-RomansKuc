@@ -1,4 +1,4 @@
-# python3
+# Romans Kucerenko 4.grupa 211RDB275
 
 import sys
 import threading
