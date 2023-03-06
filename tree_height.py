@@ -2,21 +2,22 @@
 import sys
 import threading
 import numpy as nup
+
 """
  def node1(n,parent,d):
     if(parent[n]=1):return false
     if(d[n]!=0):return d
     return parent[n]*/ 
 """
+
 def compute_height(n, parents):
     # Write this function
-    
     i,max_height = int(0)
     # Your code her
     part=nup.zeros(n,dtype=int)
     while(i<n):
         part[i]=node2(i,parents,part)     
-        i+=1  
+        i=1+i  
     max_height=nup.amax(part)
     return max_height
 
