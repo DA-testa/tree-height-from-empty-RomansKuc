@@ -1,19 +1,35 @@
 # Romans Kucerenko 4.grupa 211RDB275
-
 import sys
 import threading
-
-
+import numpy as nup
+"""
+ def node1(n,parent,d):
+    if(parent[n]=1):return false
+    if(d[n]!=0):return d
+    return parent[n]*/ 
+"""
 def compute_height(n, parents):
     # Write this function
-    max_height = 0
-    # Your code here
+    
+    i,max_height = int(0)
+    # Your code her
+    part=nup.zeros(n,dtype=int)
+    while(i<n):
+        part[i]=node2(i,parents,part)     
+        i+=1  
+    max_height=nup.amax(part)
     return max_height
 
+def node2(n,parents,d):
+    if(parents[n]==-1):return 1
+    if(d[n]!=0):return d[n]
+    d[n]=node1(parents[n],parents,d)+1
+    return d[n]
 
 def main():
     # implement input form keyboard and from files
-    
+  
+
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     
